@@ -1,0 +1,142 @@
+@font-face {
+  font-family: "CustomFont";
+  src: url("./assets/fonts/Figtree-VariableFont_wght.ttf") format("truetype");
+}
+
+:root {
+  --yellow: hsl(47, 88%, 63%);
+  --white: hsl(0, 0%, 100%);
+  --gray-500: hsl(0, 0%, 42%);
+  --gray-950: hsl(0, 0%, 7%);
+
+  --font-family-primary: "CustomFont", sans-serif;
+  --font-size-body: 16px;
+
+  --font-weight-regular: 500;
+  --font-weight-bold: 800;
+
+  --mobile-width: 375px;
+  --desktop-width: 1440px;
+
+  --border-radius: 8px;
+  --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --transition-default: 0.3s ease-in-out;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.6;
+  color: var(--gray-950);
+  background-color: var(--yellow);
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-body);
+  cursor: default;
+}
+
+.blog-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.card {
+  background-color: var(--white);
+  border-radius: 10px;
+  border: 1px solid black;
+  box-shadow: 10px 10px 0px black;
+  width: 340px;
+  padding: 1.5rem;
+  text-align: left;
+}
+
+.card-image img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.card-content {
+  margin-top: 1rem;
+}
+
+.tag {
+  background-color: var(--yellow);
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+}
+
+.date {
+  font-size: 0.8rem;
+  color: var(--gray-500);
+  margin-top: 0.5rem;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: var(--font-weight-bold);
+  margin-top: 0.5rem;
+}
+.card-title:hover {
+  color: var(--yellow);
+  cursor:pointer;
+}
+
+.card-description {
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  color: var(--gray-500);
+}
+
+.card-author {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.card-author img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+}
+
+.author-name {
+  font-weight: var(--font-weight-bold);
+  font-size: 1rem;
+}
+
+/* Attribution */
+.attribution {
+  font-size: 12px;
+  text-align: center;
+  margin-top: 1.5rem;
+  color: var(--gray-500);
+}
+
+.attribution a {
+  color: var(--gray-500);
+  text-decoration: none;
+}
+
+.attribution img {
+  width: 20px;
+  margin-bottom: -6px;
+}
+
+@media (max-width: 800px) {
+  .card-title {
+    font-size: 1.3rem;
+  }
+}
